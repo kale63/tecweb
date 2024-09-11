@@ -74,37 +74,86 @@
     <p>$b *= $c; </p>
     <p>$z[0] = “MySQL”;</p>
     <?php
-    $a = "PHP5";
-    echo '$a: ', $a, '<br>';
+        unset($a, $b, $c);  
+        $a = "PHP5";
+        echo '$a: ', $a, '<br>';
 
-    $z[] = &$a;
-    echo '$z: ', $z[0], '<br>';
+        $z[] = &$a;
+        print_r($z);
 
-    $b = "5a version de PHP";
-    echo '$b: ', $b, '<br>';
+        $b = "5a version de PHP";
+        echo '<br>$b: ', $b, '<br>';
 
-    $c = $b * 10;
-    echo '$c: ', $c, '<br>';
+        @$c = $b * 10;
+        echo '$c: ', $c, '<br>';
 
-    $a .= $b;
-    echo '$a: ', $a, '<br>';
+        $a .= $b;
+        echo '$a: ', $a, '<br>';
 
-    $b *= $c;
-    echo '$b: ', $b, '<br>';
+        $b *=  (int) $b * $c;
+        echo '$b: ', $b, '<br>';
 
-    $z[0] = "MySQL";
-    echo '$z: ', $z[0], '<br>'; 
+        $z[0] = "MySQL";
+        print_r($z);
     ?>
 
     <h2>Ejercicio 4</h2>
     <p>Lee y muestra los valores de las variables del ejercicio anterior, pero ahora con la ayuda de 
     la matriz  $GLOBALS o del modificador global de PHP. </p>
     <?php
-    echo '$GLOBALS["a"]: ', $GLOBALS['a'], '<br>';
-    echo '$GLOBALS["b"]: ', $GLOBALS['b'], '<br>';
-    echo '$GLOBALS["c"]: ', $GLOBALS['c'], '<br>';
-    echo '$GLOBALS["z"]: ', print_r($GLOBALS['z'], true), '<br>';
+        echo '$GLOBALS["a"]: ', $GLOBALS['a'], '<br>';
+        echo '$GLOBALS["b"]: ', $GLOBALS['b'], '<br>';
+        echo '$GLOBALS["c"]: ', $GLOBALS['c'], '<br>';
+        echo '$GLOBALS["z"]: ', print_r($GLOBALS['z'], true), '<br>';
     ?>
 
+    <h2>Ejercicio 5</h2>
+    <p>Dar el valor de las variables $a, $b, $c al final del siguiente script:</p>
+    <p>$a = “7 personas”;</p>
+    <p>$b = (integer) $a;</p>
+    <p>$a = “9E3”; </p>
+    <p>$c = (double) $a; </p>
+
+    <?php
+        unset($a, $b, $c, $z);
+        $a = "7 personas";
+        $b = (integer) $a;
+        $a = "9E3";
+        $c = (double) $a;
+        echo '$a: ', $a, '<br>';
+        echo '$b: ', $b, '<br>';
+        echo '$c: ', $c, '<br>'; 
+    ?>
+
+    <h2>Ejercicio 6</h2>
+    <p>Dar y comprobar el valor booleano de las variables $a, $b, $c, $d, $e y $f y muéstralas 
+    usando la función var_dump(datos). </p>
+    <p>Después investiga una función de PHP que permita transformar el valor booleano de $c y $e 
+    en uno que se pueda mostrar con un echo:</p>
+    <p>$a = “0”;</p>
+    <p>$b = “TRUE”;</p>
+    <p>$c = FALSE;</p>
+    <p>$d = ($a OR $b);</p>
+    <p>$e = ($a AND $c); </p>
+    <p>$f = ($a XOR $b);</p>
+    <?php
+        unset($a, $b, $c, $z);
+        $a = "0";
+        $b = "TRUE";
+        $c = FALSE;
+        $d = ($a OR $b);
+        $e = ($a AND $c);
+        $f =($a XOR $b);
+        
+        var_dump($a); 
+        var_dump($b); 
+        var_dump($c);
+        var_dump($d);  
+        var_dump($e); 
+        var_dump($f);
+
+        echo "c: ", var_export($c, true), "<br>";
+        echo "e: ", var_export($e, true), "<br>";
+    ?>
 </body>
 </html>
