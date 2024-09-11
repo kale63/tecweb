@@ -61,5 +61,50 @@
         echo '<p>Se reasignó el valor de la variable $a a "PHP Server", además $b pasó a estar asignada el valor de $a al igual que la variable $c, por lo que ahora todas tienen el valor de $a.</p>';
         
     ?>
+
+    <h2>Ejercicio 3</h2>
+    <p>Muestra el contenido de cada variable inmediatamente después de cada asignación, 
+    verificar la evolución del tipo de estas variables (imprime todos los componentes de los 
+    arreglo): </p>
+    <p>$a = “PHP5”; </p>
+    <p>$z[] = &$a; </p>
+    <p>$b = “5a version de PHP”;</p>
+    <p>$c = $b*10;</p>
+    <p>$a .= $b;</p>
+    <p>$b *= $c; </p>
+    <p>$z[0] = “MySQL”;</p>
+    <?php
+    $a = "PHP5";
+    echo '$a: ', $a, '<br>';
+
+    $z[] = &$a;
+    echo '$z: ', $z[0], '<br>';
+
+    $b = "5a version de PHP";
+    echo '$b: ', $b, '<br>';
+
+    $c = $b * 10;
+    echo '$c: ', $c, '<br>';
+
+    $a .= $b;
+    echo '$a: ', $a, '<br>';
+
+    $b *= $c;
+    echo '$b: ', $b, '<br>';
+
+    $z[0] = "MySQL";
+    echo '$z: ', $z[0], '<br>'; 
+    ?>
+
+    <h2>Ejercicio 4</h2>
+    <p>Lee y muestra los valores de las variables del ejercicio anterior, pero ahora con la ayuda de 
+    la matriz  $GLOBALS o del modificador global de PHP. </p>
+    <?php
+    echo '$GLOBALS["a"]: ', $GLOBALS['a'], '<br>';
+    echo '$GLOBALS["b"]: ', $GLOBALS['b'], '<br>';
+    echo '$GLOBALS["c"]: ', $GLOBALS['c'], '<br>';
+    echo '$GLOBALS["z"]: ', print_r($GLOBALS['z'], true), '<br>';
+    ?>
+
 </body>
 </html>
