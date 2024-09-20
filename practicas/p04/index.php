@@ -90,7 +90,7 @@
         $a .= $b;
         echo '$a: ', $a, '<br>';
 
-        $b *=  (int) $b * $c;
+        $b =  (int) $b * $c;
         echo '$b: ', $b, '<br>';
 
         $z[0] = "MySQL";
@@ -165,7 +165,6 @@
         echo "Versión de Apache y PHP: " . $_SERVER['SERVER_SOFTWARE'] . "<br>";
         echo "Sistema operativo del servidor: " . php_uname() . "<br>";
         echo "Idioma del navegador: " . $_SERVER['HTTP_ACCEPT_LANGUAGE'] . "<br>";
-
     ?>
 </body>
 </html>
