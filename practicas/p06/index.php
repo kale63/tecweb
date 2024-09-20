@@ -107,12 +107,17 @@
     <form method="POST" action="">
         Buscar por matrícula: <input type="text" id="matricula" name="matricula" placeholder="Ingresa matrícula">
         <br><br>
-        <input type="submit" value="Buscar">
+        <input type="submit" name="buscar" value="Buscar">
     </form>
     <?php
-        if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST['matricula'])) {
-            $matricula = isset($_POST['matricula']);
-            mostrar_Coches($matricula);
+        if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['buscar'])) {
+            if (isset($_POST['matricula'])) {
+                $matricula = $_POST['matricula'];
+            } else {
+                $matricula = ''; 
+            }
+    
+            mostrar_Coches($matricula); 
         }
     ?>
 </body>
