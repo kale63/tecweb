@@ -8,7 +8,7 @@
     }
 
     if (!empty($tope)) {
-        @$link = new mysqli('localhost', 'root', 'californication', 'marketzone');
+        @$link = new mysqli('localhost', 'root', 'cali-', 'marketzone');
 
         if ($link->connect_errno) {
             die('Falló la conexión: ' . $link->connect_error . '<br/>');
