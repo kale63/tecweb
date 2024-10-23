@@ -33,18 +33,44 @@ $(document).ready(function() {
         let search = $('#search').val();
         $.ajax({
           url: 'backend/product-search.php',
-          type: 'POST',
+          type: 'GET',
           data: {search},
           success: function (response) {
-            if(!response.error) {
+            //if(!response.error) {
               let products = JSON.parse(response);
               let template = '';
+              let template2 = '';
               products.forEach(product => {
-                template += `<li><a href="#" class="product-item">${product.nombre}</a></li>`
+                let descripcion = '';
+                descripcion += '<li>precio: '+product.precio+'</li>';
+                descripcion += '<li>unidades: '+product.unidades+'</li>';
+                descripcion += '<li>modelo: '+product.modelo+'</li>';
+                descripcion += '<li>marca: '+product.marca+'</li>';
+                descripcion += '<li>detalles: '+product.detalles+'</li>';
+                    
+                template += `
+                    <tr productId="${product.id}">
+                      <td>${product.id}</td>
+                      <td><a href="#" class="product-item">
+                        ${product.nombre}</a>
+                      </td>
+                      <td>${product.detalles}</td>
+                      <td>
+                      <button class="product-delete btn btn-danger">
+                        Borrar 
+                      </button>
+                      </td>
+                      </tr>
+                    `;
+                template2 += `<li><a href="#" class="product-item">
+                      ${product.nombre}</a></li>`
               });
+              console.log(template);
+              console.log(template2);
               $('#product-result').show();
-              $('#container').html(template);
-            }
+              $('#container').html(template2);
+              $('#products').html(template);
+            //}
           } 
         })
       }
@@ -90,12 +116,13 @@ $(document).ready(function() {
       $.post(url, hilo, function(response)  {
         fetchProducts();
         $('#product-form').trigger('reset');
+        init();
 
         let resp = JSON.parse(response);
         let template = '';
         template += `
-            <li style="list-style: none;">status: ${respuesta.status}</li>
-            <li style="list-style: none;">message: ${respuesta.message}</li>
+            <li style="list-style: none;">status: ${resp.status}</li>
+            <li style="list-style: none;">message: ${resp.message}</li>
             `;
         $('#product-result').show();
         $('#container').html(template);
