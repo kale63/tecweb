@@ -12,14 +12,13 @@ if ($result = $conexion->query("SELECT * FROM productos WHERE eliminado = 0")) {
     if (!empty($rows)) {
         // SE MAPEAN AL ARREGLO DE RESPUESTA
         foreach ($rows as $num => $row) {
-            $data[$num] = $row; // No need for utf8_encode if data is already UTF-8
+            $data[$num] = $row; 
         }
     }
     $result->free();
 } else {
-    // Devolver un mensaje de error en JSON
     echo json_encode(['error' => 'Query Error: ' . $conexion->error]);
-    exit; // Ensure the script stops after returning an error
+    exit; 
 }
 
 $conexion->close();

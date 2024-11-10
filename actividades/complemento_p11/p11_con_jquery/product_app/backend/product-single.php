@@ -23,21 +23,4 @@
         }
         $conexion->close();
     }
-    
-    $data = array();
-            if(isset($name) && !empty($name)) {
-                error_log("Valor de name: " . $name);
-                // SE ASUME QUE LOS DATOS YA FUERON VALIDADOS ANTES DE ENVIARSE
-                $sql = "SELECT * FROM productos WHERE nombre LIKE '%{$name}%' AND eliminado = 0";
-                $result = $this->conexion->query($sql);
-                if($result->num_rows > 0){
-                    $data['status'] =  "error";
-                    $data['message'] =  "Ya existe un producto con ese nombre";
-                }else{
-                    $data['status'] =  "success";
-                    $data['message'] =  "Nombre de producto aceptado";
-                }
-
-    // SE HACE LA CONVERSIÓN DE ARRAY A JSON
-    echo json_encode($data, JSON_PRETTY_PRINT);
 ?>

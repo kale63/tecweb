@@ -1,33 +1,38 @@
 <?php
-    include_once __DIR__.'/database.php';
+include_once __DIR__.'/database.php';
 
-    // SE OBTIENE LA INFORMACIÓN DEL PRODUCTO ENVIADA POR EL CLIENTE
-    $data = array(
-        'status'  => 'error',
-        'message' => 'Ya existe un producto con ese nombre'
-    );
-    if(!empty($jsonOBJ)) {
+$data = array(
+    'status'  => 'error',
+    'message' => 'Error'
+);
+
+if(!empty($jsonOBJ)) {
+    $sql = "SELECT * FROM productos WHERE nombre = '{$jsonOBJ->nombre}' AND eliminado = 0";
+    $result = $conexion->query($sql);
+
+    if ($result && $result->num_rows == 0) {
+        $conexion->set_charset("utf8");
         
-        // SE ASUME QUE LOS DATOS YA FUERON VALIDADOS ANTES DE ENVIARSE
-        $sql = "SELECT * FROM productos WHERE nombre = '{$jsonOBJ->nombre}' AND eliminado = 0";
-        $result = $conexion->query($sql);
-        
-        if ($result->num_rows == 0) {
-            $conexion->set_charset("utf8");
-            $sql = "INSERT INTO productos VALUES (null, '{$jsonOBJ->nombre}', '{$jsonOBJ->marca}', '{$jsonOBJ->modelo}', {$jsonOBJ->precio}, '{$jsonOBJ->detalles}', {$jsonOBJ->unidades}, '{$jsonOBJ->imagen}', 0)";
-            if($conexion->query($sql)){
-                $data['status'] =  "success";
-                $data['message'] =  "Producto agregado";
-            } else {
-                $data['message'] = "ERROR: No se ejecuto $sql. " . mysqli_error($conexion);
-            }
+        $sql = "INSERT INTO productos 
+                VALUES (null, '{$jsonOBJ->nombre}', '{$jsonOBJ->marca}', '{$jsonOBJ->modelo}', 
+                        {$jsonOBJ->precio}, '{$jsonOBJ->detalles}', {$jsonOBJ->unidades}, 
+                        '{$jsonOBJ->imagen}', 0)";
+
+        if($conexion->query($sql)) {
+            $data['status'] = "success";
+            $data['message'] = "Producto agregado";
+        } else {
+            $data['message'] = "Error al insertar: " . $conexion->error;
         }
-
-        $result->free();
-        // Cierra la conexion
-        $conexion->close();
+    } elseif ($result) {
+        $data['message'] = "Producto con ese nombre ya existe.";
+    } else {
+        $data['message'] = "Error en la consulta: " . $conexion->error;
     }
 
-    // SE HACE LA CONVERSIÓN DE ARRAY A JSON
-    echo json_encode($data, JSON_PRETTY_PRINT);
+    if ($result) $result->free();
+    $conexion->close();
+}
+
+echo json_encode($data, JSON_PRETTY_PRINT);
 ?>
