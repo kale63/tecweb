@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>ProductApp</title>
+    <!-- BOOTSTRAP 4  -->
+    <link rel="stylesheet" href="https://bootswatch.com/4/superhero/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"></script>
+  </head>
+  <body>
+
+    <!-- BARRA DE NAVEGACIÓN  -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href=".">ProductApp</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto"></ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" name="search" id="search" type="search" placeholder="ID, marca o descripción" aria-label="Search">
+            <button class="btn btn-success my-2 my-sm-0" type="submit">Buscar</button>
+          </form>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row p-4">
+        <div class="col-md-5">
+          <div class="card">
+            <div class="card-body">
+              <!-- FORMULARIO PARA AGREGAR PRODUCTO -->
+              <form id="product-form">
+                <div class="form-group">
+                  <label for="name">Nombre:</label>
+                  <input class="form-control" type="text" id="name" placeholder="Nombre de producto">
+                  <div id="name-feedback" style="display:none;"></div>
+                </div>
+                <div class="form-group">
+                  <label>Marca:</label>
+                  <select id="form-marca" class="form-control">
+                      <option value="" disabled selected>Selecciona una marca</option>
+                      <option value="ravensburger">Ravensburger</option>
+                      <option value="magic">Magic Puzzle Company</option>
+                      <option value="daqi">DAQI</option>
+                      <option value="lego">LEGO</option>
+                      <option value="clementoni">Clementoni</option>
+                      <option value="plaid">Plaid</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="form-modelo">Modelo:</label>
+                  <input class="form-control" type="text"name="modelo" id="form-modelo" placeholder="Modelo">
+                </div>
+                <div class="form-group">
+                  <label for="form-descripcion">Detalles:</label>
+                  <textarea class="form-control" name="descripcion" id="form-descripcion" rows="4" class="form-control" placeholder="Detalles del Producto"></textarea>
+                </div>
+                <div class="form-group">
+                  <label for="form-precio">Precio:</label>
+                  <input class="form-control" type="number" name="precio" id="form-precio" placeholder="Precio">
+                </div>
+                <div class="form-group">
+                  <label for="form-unidad">Unidades:</label>
+                  <input class="form-control" type="number" name="unidad" id="form-unidad" placeholder="Unidades">
+                </div>
+                <div class="form-group">
+                  <label for="form-img">Ruta de la imagen:</label>
+                  <input class="form-control" type="text" name="img" id="form-img" placeholder="Ruta de la Imagen">
+                </div>
+                <input type="hidden" id="productId">
+                <button class="btn btn-primary btn-block text-center" type="submit" id="add-edit">Agregar Producto</button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- TABLA  -->
+        <div class="col-md-7">
+          <div class="card my-4" id="product-result">
+            <div class="card-body">
+              <!-- RESULTADO -->
+              <ul id="container"></ul>
+            </div>
+          </div>
+
+          <table class="table table-bordered table-sm">
+            <thead>
+              <tr>
+                <td>Id</td>
+                <td>Nombre</td>
+                <td>Descripción</td>
+              </tr>
+            </thead>
+            <tbody id="products"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+  </body>
+
+</html>
