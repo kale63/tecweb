@@ -6,5 +6,5 @@
 
     $producto = new Products('marketzone');
     $producto->list();
-    //echo $producto->getData();
+    echo $producto->getData();
 ?>

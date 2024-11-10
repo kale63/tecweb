@@ -82,7 +82,7 @@ $(document).ready(function() {
         const name = $('#name').val().trim();
 
         var hilo = $('#description').val();
-        var finalJSON = JSON.parse(hilo);
+        var finalJSON = JSON.parse(hilo).trim();
         finalJSON['nombre'] = $('#name').val();
         finalJSON['id'] = $('#productId').val();
 
