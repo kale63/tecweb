@@ -3,6 +3,7 @@ namespace TECWEB\MYAPI;
 
 abstract class DataBase {
     protected $conexion;
+    protected $data;
 
     public function __construct($db, $user, $pass) {
         $this->conexion = @mysqli_connect(
@@ -11,6 +12,7 @@ abstract class DataBase {
             $pass,
             $db
         );
+        $this->data= array();
     
         /**
          * NOTA: si la conexión falló $conexion contendrá false

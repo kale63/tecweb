@@ -5,10 +5,7 @@ use TECWEB\MYAPI\DataBase;
 require_once __DIR__ . '/DataBase.php';
 
 class Read extends DataBase {
-    private $data;
-
     public function __construct($db, $user='root', $pass='') {
-        $this->data = array();
         parent::__construct($db, $user, $pass);
     }
 
@@ -79,6 +76,4 @@ class Read extends DataBase {
         }
     }
 }
-
-//$productos = new Productos();
 ?>

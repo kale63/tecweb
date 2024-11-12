@@ -5,10 +5,7 @@ use TECWEB\MYAPI\DataBase;
 require_once __DIR__ . '/DataBase.php';
 
 class Delete extends DataBase {
-    private $data;
-
-    public function __construct($db, $user='root', $pass='californication') {
-        $this->data = array();
+    public function __construct($db, $user='root', $pass='') {
         parent::__construct($db, $user, $pass);
     }
     public function delete($id) {
@@ -31,6 +28,4 @@ class Delete extends DataBase {
         } 
     }
 }
-
-//$productos = new Productos();
 ?>
