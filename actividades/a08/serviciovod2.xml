@@ -1,0 +1,104 @@
+<catalogovod>
+    <cuenta correo="gar.keira04@gmail.com">
+        <perfiles>
+            <perfil usuario="Keira" idioma="Inglés">
+            </perfil>
+            <perfil usuario="Maris" idioma="Español">
+            </perfil>
+        </perfiles>
+    </cuenta>
+    <contenido>
+        <peliculas>
+            <genero nombre="Acción">
+                <titulo duracion="101 minutos">
+                    <nombre>
+                        John Wick
+                    </nombre>
+                </titulo>
+                <titulo duracion="122 minutos">
+                    <nombre>
+                        John Wick: Chapter 2
+                    </nombre>
+                </titulo>
+                <titulo duracion="131 minutos">
+                    <nombre>
+                        John Wick: Chapter 3 - Parabellum
+                    </nombre>
+                </titulo>
+                <titulo duracion="169 minutos">
+                    <nombre>
+                        John Wick: Chapter 4
+                    </nombre>
+                </titulo>
+            </genero>
+            <genero nombre="Comedia">
+                <titulo duracion="128 minutos">
+                    <nombre>
+                        BlacKkKlansman
+                    </nombre>
+                </titulo>
+                <titulo duracion="88 minutos">
+                    <nombre>
+                        Scary Movie
+                    </nombre>
+                </titulo>
+                <titulo duracion="95 minutos">
+                    <nombre>
+                        Kung-Fusión
+                    </nombre>
+                </titulo>
+                <titulo duracion="86 minutos">
+                    <nombre>
+                        Destination Wedding
+                    </nombre>
+                </titulo>
+            </genero>
+        </peliculas>
+        <programas>
+            <genero nombre="Humor Negro">
+                <titulo duracion="43–58 minutos">
+                    <nombre>
+                        Breaking Bad
+                    </nombre>
+                </titulo>
+                <titulo duracion="43 minutos aprox.">
+                    <nombre>
+                        House M.D.
+                    </nombre>
+                </titulo>
+                <titulo duracion="22 minutos">
+                    <nombre>
+                        South Park
+                    </nombre>
+                </titulo>
+                <titulo duracion="45–59 minutos">
+                    <nombre>
+                        Shameless
+                    </nombre>
+                </titulo>
+            </genero>
+            <genero nombre="Sit-com">
+                <titulo duracion="20–23 minutos">
+                    <nombre>
+                        Modern Family
+                    </nombre>
+                </titulo>
+                <titulo duracion="22–26 minutos">
+                    <nombre>
+                        The Office
+                    </nombre>
+                </titulo>
+                <titulo duracion="18–22 minutos">
+                    <nombre>
+                        The Big Bang Theory
+                    </nombre>
+                </titulo>
+                <titulo duracion="21–23 minutos">
+                    <nombre>
+                        Malcolm in the Middle
+                    </nombre>
+                </titulo>
+            </genero>
+        </programas>
+    </contenido>
+</catalogovod>

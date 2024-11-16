@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE CatalogoVOD SYSTEM "serviciovod.dtd">
+
+<CatalogoVOD>
+    <cuenta correo="gar.keira04@gmail.com">
+        <perfiles>
+            <perfil usuario="Keira" idioma="Inglés"/>
+            <perfil usuario="Maris" idioma="Español"/>
+        </perfiles>
+    </cuenta>
+    <contenido>
+        <peliculas>
+            <genero nombre="Acción">
+                <titulo duracion="101 minutos">John Wick</titulo>
+                <titulo duracion="122 minutos">John Wick: Chapter 2</titulo>
+                <titulo duracion="131 minutos">John Wick: Chapter 3 - Parabellum</titulo>
+                <titulo duracion="169 minutos">John Wick: Chapter 4</titulo>
+            </genero>
+            <genero nombre="Comedia">
+                <titulo duracion="128 minutos">BlacKkKlansman</titulo>
+                <titulo duracion="88 minutos">Scary Movie</titulo>
+                <titulo duracion="95 minutos">Kung-Fusión</titulo>
+                <titulo duracion="86 minutos">Destination Wedding</titulo>
+            </genero>
+        </peliculas>
+        <programas>
+            <genero nombre="Humor Negro">
+                <titulo duracion="43–58 minutos">Breaking Bad</titulo>
+                <titulo duracion="43 minutos aprox">House M.D.</titulo>
+                <titulo duracion="22 minutos">South Park</titulo>
+                <titulo duracion="45–59 minutos">Shameless</titulo>
+            </genero>
+            <genero nombre="Sit-com">
+                <titulo duracion="20–23 minutos">Modern Family</titulo>
+                <titulo duracion="22–26 minutos">The Office</titulo>
+                <titulo duracion="18–22 minutos">The Big Bang Theory</titulo>
+                <titulo duracion="21–23 minutos">Malcolm in the Middle</titulo>
+            </genero>
+        </programas>
+    </contenido>
+</CatalogoVOD>

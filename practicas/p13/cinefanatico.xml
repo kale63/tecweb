@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cinefanatico SYSTEM "cinefanatico.dtd">
+<cinefanatico>
+    <tarjeta noserie="001" visitas="10" puntos="1500">
+        <nombre>Daarick Luján</nombre>
+        <correo>daarick28@gmail.com</correo>
+        <telefono tipo="movil">123-456-7890</telefono>
+        <telefono tipo="casa">098-765-4321</telefono>
+    </tarjeta>
+</cinefanatico>

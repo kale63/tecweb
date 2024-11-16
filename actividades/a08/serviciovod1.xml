@@ -1,0 +1,179 @@
+<catalogovod>
+    <cuenta>
+        <correo>
+            gar.keira04@gmail.com
+        </correo>
+        <perfiles>
+            <perfil>
+                <usuario>
+                    Keira
+                </usuario>
+                <idioma>
+                    Inglés
+                </idioma>
+            </perfil>
+            <perfil>
+                <usuario>
+                    Maris
+                </usuario>
+                <idioma>
+                    Español
+                </idioma>
+            </perfil>
+        </perfiles>
+    </cuenta>
+    <contenido>
+        <peliculas>
+            <genero>
+                <nombre>
+                    Acción
+                </nombre>
+                <titulo>
+                    <nombre>
+                        John Wick
+                    </nombre>
+                    <duracion>
+                        101 minutos
+                    </duracion>
+                </titulo>
+                <titulo>
+                    <nombre>
+                        John Wick: Chapter 2
+                    </nombre>
+                    <duracion>
+                        122 minutos
+                    </duracion>
+                </titulo>
+                <titulo>
+                    <nombre>
+                        John Wick: Chapter 3 - Parabellum
+                    </nombre>
+                    <duracion>
+                        131 minutos
+                    </duracion>
+                </titulo>
+                <titulo>
+                    <nombre>
+                        John Wick: Chapter 4
+                    </nombre>
+                    <duracion>
+                        169 minutos
+                    </duracion>
+                </titulo>
+            </genero>
+            <genero>
+                <nombre>
+                   Comedia
+                </nombre>
+                <titulo>
+                    <nombre>
+                        BlacKkKlansman
+                    </nombre>
+                    <duracion>
+                        128 minutos
+                    </duracion>
+                </titulo>
+                <titulo>
+                    <nombre>
+                        Scary Movie
+                    </nombre>
+                    <duracion>
+                        88 minutos
+                    </duracion>
+                </titulo>
+                <titulo>
+                    <nombre>
+                        Kung-Fusión
+                    </nombre>
+                    <duracion>
+                        95 minutos
+                    </duracion>
+                </titulo>
+                <titulo>
+                    <nombre>
+                        Destination Wedding
+                    </nombre>
+                    <duracion>
+                        86 minutos
+                    </duracion>
+                </titulo>
+            </genero>
+        </peliculas>
+        <programas>
+            <genero>
+                <nombre>
+                    Humor Negro
+                </nombre>
+                <titulo>
+                    <nombre>
+                        Breaking Bad
+                    </nombre>
+                    <duracion>
+                        43–58 minutos
+                    </duracion>
+                </titulo>
+                <titulo>
+                    <nombre>
+                        House M.D.
+                    </nombre>
+                    <duracion>
+                        43 minutos aprox.
+                    </duracion>
+                </titulo>
+                <titulo>
+                    <nombre>
+                        South Park
+                    </nombre>
+                    <duracion>
+                        22 minutos
+                    </duracion>
+                </titulo>
+                <titulo>
+                    <nombre>
+                        Shameless
+                    </nombre>
+                    <duracion>
+                        45–59 minutos
+                    </duracion>
+                </titulo>
+            </genero>
+            <genero>
+                <nombre>
+                    Sit-com
+                </nombre>
+                <titulo>
+                    <nombre>
+                        Modern Family
+                    </nombre>
+                    <duracion>
+                        20–23 minutos
+                    </duracion>
+                </titulo>
+                <titulo>
+                    <nombre>
+                        The Office
+                    </nombre>
+                    <duracion>
+                        22-26 minutos aprox.
+                    </duracion>
+                </titulo>
+                <titulo>
+                    <nombre>
+                        The Big Bang Theory
+                    </nombre>
+                    <duracion>
+                        18-22 minutos
+                    </duracion>
+                </titulo>
+                <titulo>
+                    <nombre>
+                        Malcolm in the Middle
+                    </nombre>
+                    <duracion>
+                        21-23 minutos
+                    </duracion>
+                </titulo>
+            </genero>
+        </programas>
+    </contenido>
+</catalogovod>
