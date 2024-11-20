@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:tw="http://tecnologiasweb.com.mx"
+        targetNamespace="http://tecnologiasweb.com.mx">
+
+    <element name="Cuenta" type="tw:cuentaType"></element>
+    <element name="Nombre" type="string"/>
+    <element name="Correo" type="string"/>
+    <element name="Telefono" type="tw:tel-type"/>
+    <attribute name="id" type="string"/>
+    <attribute name="plan" type="string"/>
+    <attribute name="fechaIni" type="date"/>
+    <attribute name="fechaFin" type="date"/>
+    <attribute name="tipo" type="string"/>
+    <complexType name="cuentaType">
+        <all>
+            <element ref="tw:Nombre"/>
+            <element ref="tw:Correo"/>
+            <element ref="tw:Telefono" minOccurs="0">
+                                            
+            </element>
+        </all>
+        <attribute ref="tw:id" use="required"/>
+        <attribute ref="tw:plan" use="required"/>
+        <attribute ref="tw:fechaIni " use="optional"/>
+        <attribute ref="tw:fechaFin" use="optional"/>
+    </complexType>
+    <complexType name="spotifyType">
+        <sequence>
+            <element ref="tw:Cuenta" maxOccurs="unbounded"/>
+        </sequence>
+    </complexType>
+
+    <complexType name="tel-type">
+        <simpleContent>
+            <extension base="string">
+                <attribute ref="tw:tipo" use="required"/>
+            </extension>
+        </simpleContent>
+    </complexType>    
+    
+    <element name="Spotify" type="tw:spotifyType"/>
+</schema>
